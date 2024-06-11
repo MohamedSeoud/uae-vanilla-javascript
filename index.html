@@ -1,0 +1,322 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alkhamseen</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/flexboxgrid.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">    <script type="text/javascript" src="/js/script.js"></script>
+
+<style>
+
+@media screen and (max-width: 800px) {
+  .container-inf{
+  padding-left: 90px;
+  padding-top:20px;
+  padding-bottom:20px!important;
+  display:flex;
+  flex-direction:column;
+  justify-content: center !important;
+  align-items: center !important;
+  padding-right: 90px;
+
+}
+}
+.container-inf{
+  padding-left: 90px;
+  padding-top:20px;
+  padding-bottom:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: start;
+  padding-right: 90px;
+
+}
+.line{
+  max-width: 70px;
+  height: 4px;
+  width: 100%;
+  background-color: #009961; 
+   display: flex;
+   align-items: center;
+   text-align: center;
+    justify-content: center;
+}
+.subtitle{
+  font-weight: 700;
+  color: rgb(220 38 38);
+}
+.subtitle-gallery{
+  font-weight: 700;
+}
+.choose-button{
+  background-color: #009961; 
+  color: white;
+  padding: 5px;
+  border-radius: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  border: none !important;
+  min-width: 70px;
+
+}
+
+.gallery-container{
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.picture-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+}
+
+</style>
+
+
+</head>
+
+
+<body> 
+
+    <nav class="navbar">
+        <div class="container">
+          <div href="#" class="logo">International Corporate Consultancy</div>
+          <button class="login-button-2">Login</button>
+
+          <button class="toggle-button" id="toggleButton">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+
+          <ul class="nav-links" id="navLinks">
+            <li><a class="cool-link" href="#">Home</a></li>
+            <li><a class="cool-link" href="#">About</a></li>
+            <li><a class="cool-link" href="#">Services</a></li>
+            <li><a class="cool-link" href="#">Contact</a></li>
+            <li >
+              <select class="lang" name="lang" id="langs">
+              <option class="lang-option" value="volvo">English</option>
+              <option class="lang-option"value="saab">العربية</option>
+              <option class="lang-option"value="mercedes">Türkçe</option>
+            </select>
+          </li>
+            
+
+          </ul>
+
+          <ul class="nav-links small-lang" id="navLinks">
+            <li><a class="cool-lang" href="#">English</a></li>
+            <li><a class="cool-lang" href="#">العربية</a></li>
+            <li><a class="cool-lang" href="#">Türkçe</a></li>
+          </ul>
+
+            <button class="login-button">Login</button>
+
+
+
+        </div>
+      </nav>
+
+      <!-- <nav class="navbar">
+        <div class="container">
+          <a href="#" class="logo">Logo</a>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav> -->
+
+    <section id="hero" class="d-flex flex-column justify-content-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-8">
+              <button id="popup-button" class=" play-button glightbox play-btn mb-4"></button>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+
+      
+      <div id="popup-container" class="popup-container">
+        <span class="close-button" onclick="closePopup()">X</span>
+        <div class="video-container">
+            <iframe id="youtube-iframe" src="" frameborder="0"  allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+    </div>
+
+
+
+    <div class=" container-about">
+    <div class="container-title">
+      <div class="title">
+        About Us   ?
+
+      </div>
+    </div>
+
+			<div class="container">
+        <div class="row">
+
+					<div class="col-md-4 to-animate">
+						<div class="fh5co-type">
+							<h3 class="with-icon icon-1">Fruits</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						</div>
+					</div>
+					<div class="col-md-4 to-animate">
+						<div class="fh5co-type">
+							<h3 class="with-icon icon-2">Sea food</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						</div>
+					</div>
+					<div class="col-md-4 to-animate">
+						<div class="fh5co-type">
+							<h3 class="with-icon icon-3">Vegetables</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						</div>
+					</div>
+
+				</div>
+      </div>
+		</div>
+
+
+    <div class=" container-information">
+      <div class="container-inf ">
+        <div class="titleInf">
+          Information
+        </div>
+        <div class="line">
+          
+        </div>
+      </div>
+  
+        <div class="container">
+          <div class="row">
+  
+            <div class="col-12 to-animate">
+              <div class="fh5co-type">
+                <h5 class="with-icon subtitle">The activities related to the year 50 are centered around four main pillars:</h5>
+                <p class="">Launching the fiftieth year in a festive spirit that includes everyone who considers the UAE their home.
+                  Inviting the people of the country to reflect on the values and achievements of the past in honor of our founding fathers
+                  Inspiring young people to imagine the aspirations of the next 50 years and supporting them with the tools to create the future. .
+                  The launch of the Year of Preparation for the 50th comes at a pivotal stage in the history of the UAE, which is preparing to celebrate its fiftieth anniversary in December of the year 2021, as the golden jubilee of the young country constitutes a milestone that calls for setting the new development model for the UAE. All institutional efforts in the country and all resources and capabilities will be mobilized within the various leadership and administrative cadres, in addition to investing in experiences, creative minds, exceptional talents and competencies to design new systems for the next fifty years, and create a collective vision around which all segments of society gather, so that the UAE during the next fifty years will be the most Distinguished and the best in quality of life in the world.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class=" container-information">
+        <div class="container-inf ">
+          <div class="titleInf">
+            Gallery
+          </div>
+          <div class="line">
+            
+          </div>
+        </div>
+    
+          <div class="container-gallery">
+            <div class="row">
+    
+              <div class="col-12 to-animate">
+                  <h6 class="with-icon subtitle-gallery">The most prominent pictures of the celebration of the fiftieth year of the United Arab Emirates </h6>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="container-gallery-image">
+
+          <div class="gallery-container row">
+
+            <div class="col-12 to-animate ">
+              <button class="choose-button">All</button>
+          </div>
+
+          <div class="col-12 row to-animate ">
+          
+            <div class="col-md-3 picture-container">
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+        </div>
+</body>
+
+
+
+<script>
+function openPopup(videoId) {
+    var popupContainer = document.getElementById('popup-container');
+    var youtubeIframe = document.getElementById('youtube-iframe');
+
+    youtubeIframe.src = "https://www.youtube.com/embed/" + videoId;
+    popupContainer.classList.add('show');
+}
+
+function closePopup() {
+    var popupContainer = document.getElementById('popup-container');
+    var youtubeIframe = document.getElementById('youtube-iframe');
+
+    youtubeIframe.src = "";
+    popupContainer.classList.remove('show');
+}
+
+var popupButton = document.getElementById('popup-button');
+popupButton.addEventListener('click', function() {
+    openPopup("9Dr4a4_c27k");
+});
+</script>
+
+<script>
+
+
+  document.getElementById('toggleButton').addEventListener('click', function() {
+    var navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+    
+    // Toggle the border direction with a delay
+    setTimeout(function() {
+      if (navLinks.classList.contains('active')) {
+        navLinks.style.borderRight = 'none';
+        navLinks.style.borderLeft = '2px solid #fff';
+      } else {
+        navLinks.style.borderRight = '2px solid #fff';
+        navLinks.style.borderLeft = 'none';
+      }
+    }, 100); // Delay time in milliseconds
+  });
+</script>
+</html>
+
+
+
+
+
+
