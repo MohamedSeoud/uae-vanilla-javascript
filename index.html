@@ -51,7 +51,17 @@
 
 
   }
+  .cool-lang{
+    text-decoration: none !important;
+    cursor: pointer;
+  }
   
+  .cool-lang:hover {
+    color: #009961 !important;
+  }
+  .activeLang{
+    color: #009961 !important;
+  }
 
 
 
@@ -81,7 +91,7 @@
             <li><a class="cool-link" href="#gallery">Gallery</a></li>
             <li >
               <select class="lang langWrap" name="lang" id="langs">
-              <option class="lang-option" value="english">English</option>
+              <option class="lang-option " value="english">English</option>
               <option class="lang-option"value="arabic">العربية</option>
               <option class="lang-option"value="Turkish">Türkçe</option>
             </select>
@@ -91,7 +101,7 @@
           </ul>
 
           <ul class="nav-links small-lang" id="navLinks">
-            <li><a class="cool-lang" href="#">English</a></li>
+            <li><a class="cool-lang activeLang" href="#">English</a></li>
             <li><a class="cool-lang" href="#">العربية</a></li>
             <li><a class="cool-lang" href="#">Türkçe</a></li>
           </ul>
@@ -362,12 +372,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 
-  const langEl = document.querySelector('.langWrap');
+  const langEl = document.querySelector('.small-lang');
   const link = document.querySelectorAll('cool-lang');
 
   link.forEach(element=>{
     element.addEventListener('click' , ()=>{
-      langEl.querySelector('.active')
+      langEl.querySelector('.activeLang').classList.remove('activeLang');
+      element.classList.add('activeLang')
     })
   })
 </script>
