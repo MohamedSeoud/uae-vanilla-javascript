@@ -75,7 +75,7 @@
 
     <nav  id="navbar" class="navbar">
         <div class="container">
-          <div class="logo logoText"><a class="logoRef" href="#home" >International Corporate Consultancy</a></div>
+          <div class="logo "><a class="logoRef logoText" href="#home" >International Corporate Consultancy</a></div>
           <button class="login-button-2">Login</button>
 
           <button class="toggle-button" id="toggleButton">
@@ -93,7 +93,7 @@
               <select class="lang langWrap" name="lang" id="langs">
               <option class="lang-option " value="english">English</option>
               <option class="lang-option" value="arabic">العربية</option>
-              <option class="lang-option" value="Turkish">Türkçe</option>
+              <option class="lang-option" value="turkish">Türkçe</option>
             </select>
           </li>
             
@@ -103,7 +103,7 @@
           <ul class="nav-links small-lang" id="navLinks">
             <li><a class="cool-lang activeLang" lang="english" href="#">English</a></li>
             <li><a class="cool-lang" lang="arabic" href="#">العربية</a></li>
-            <li><a class="cool-lang" lang="Turkish" href="#"> Türkçe</a></li>
+            <li><a class="cool-lang" lang="turkish" href="#"> Türkçe</a></li>
           </ul>
 
             <button class="login-button">Login</button>
@@ -280,17 +280,11 @@
     
 </body>
 
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
 <script>
 
-  function googleTranslateElementInit(){
-    new google.translate.translateElement(
-      {pageLanguage: 'en'},
 
-  )
-  }
 
 
 
@@ -374,13 +368,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const langEl = document.querySelector('.small-lang');
   const link = document.querySelectorAll('.cool-lang');
-  const logo_text = document.querySelectorAll('.logoText');
+  const logo_text = document.querySelector('.logoText');
 
   link.forEach(element=>{
     element.addEventListener('click' , ()=>{
       langEl.querySelector('.activeLang').classList.remove('activeLang');
       element.classList.add('activeLang');
       const attribute = element.getAttribute('lang');
+      if(attribute === "arabic" ){
+        document.dir="rtl"
+      }
+      else{
+        document.dir="ltr"
+
+      }
       console.log('sss',attribute)
 
       logo_text.textContent = data[attribute].logoText;
@@ -389,12 +390,18 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   var data = {
-    "english":{
-      "logoText":"International Corporate Consultancy"
+    "english" : {
+      "logoText" : "International Corporate Consultancy",
     },
-    "arabic":{
-      "logoText":"استشارات الشركات الدولية"
+    "arabic" : {
+      "logoText" : "استشارات الشركات الدولية",
     },
+
+    "turkish" : {
+      "logoText" :  "Uluslararası Kurumsal Danışmanlık",
+    },
+
+
   }
 </script>
 
