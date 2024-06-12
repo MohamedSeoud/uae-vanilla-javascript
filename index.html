@@ -10,268 +10,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">    <script type="text/javascript" src="/js/script.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-<style>
-
-@media screen and (max-width: 800px) {
-  .container-inf{
-  padding-left: 90px;
-  padding-top:20px;
-  padding-bottom:20px!important;
-  display:flex;
-  flex-direction:column;
-  justify-content: center !important;
-  align-items: center !important;
-  padding-right: 90px;
-
-}
-}
-.container-inf{
-  padding-left: 90px;
-  padding-top:20px;
-  padding-bottom:20px;
-  display:flex;
-  flex-direction:column;
-  justify-content: center;
-  align-items: start;
-  padding-right: 90px;
-
-}
-.line{
-  max-width: 70px;
-  height: 4px;
-  width: 100%;
-  background-color: #009961; 
-   display: flex;
-   align-items: center;
-   text-align: center;
-    justify-content: center;
-}
-.subtitle{
-  font-weight: 700;
-  color: rgb(220 38 38);
-}
-.subtitle-gallery{
-  font-weight: 700;
-}
-.choose-button{
-  background-color: #009961; 
-  color: white;
-  padding: 5px;
-  border-radius: 1.5rem;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  border: none !important;
-  min-width: 70px;
-
-}
-
-.gallery-container{
-  justify-content: center;
-  align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-}
-.picture-container {
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 350px;
-  overflow-x: hidden;
-  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
-  transition: height 0.5s ease !important; /* Smooth transition effect */
-
-  
-}
-
-.image-container{
-  width: 100%;
-  height: 100%;
-  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-
-}
-.images-container{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr) !important;
-
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: .5rem;
-  row-gap: 2.5rem !important;
-
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-}
-
-@media screen and (min-width: 850px) and (max-width: 1250px) {
-
-  .images-container{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr) !important;
-
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 0.5rem;
-  row-gap: 2.5rem !important;
-
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-}
-
-}
-
-@media screen and (min-width: 550px) and (max-width: 850px) {
-
-.images-container{
-display: grid;
-grid-template-columns: repeat(2, 1fr) !important;
-row-gap: 2.5rem !important;
-
-flex-direction: row;
-flex-wrap: wrap;
-width: 100%;
-gap: 0.5rem;
-padding-top: 1.75rem;
-padding-bottom: 1.75rem;
-}
-
-}
-
-@media screen and (max-width: 550px) {
-
-.images-container{
-display: grid;
-grid-template-columns: repeat(1, 1fr) !important;
-row-gap: 2.5rem !important;
-
-flex-direction: row;
-flex-wrap: wrap;
-width: 100%;
-gap: 0.5rem;
-padding-top: 1.75rem;
-padding-bottom: 1.75rem;
-}
-
-}
-
-
-</style>
-
 
 <style>
-.back-to-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 996;
-  background: #009961;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  transition: all 0.4s;
-}
-.back-to-top i {
-  font-size: 28px;
-  color: #fff;
-  line-height: 0;
-}
-.back-to-top:hover {
-  background: #00c27b;
-  color: #fff;
-}
-.back-to-top.active {
-  visibility: visible;
+
+
+
+#absoluteButton.visible {
   opacity: 1;
 }
 
+.picture-container {
+    position: relative !important;
+    cursor: pointer !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    height: 350px !important;
+    overflow-x: hidden !important;
+    transition: all 0.6s ease !important;
+    transition: height 0.9s ease !important; /* Smooth transition effect */
+  
+    
+  }
+.picture-container:hover .child {
+  height: 50px !important;
 
-  .footer{
-    background-color: black;
-    padding-top: 2.75rem;
-    padding-bottom: 2.75rem;
-    padding-left: 2.75rem;
-    padding-right: 2.75rem;
-    min-height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
+}
 
-  }
-  .sub-footer{
-    font-weight: 100;
-
-  }
-  .text-red{
-    color: rgb(220 38 38);
-
-  }
-  .text-green{
-    color: #009961;
-  }
-  .text-white{
-    color: white;
-  }
-</style>
-<style>
-  .show-button-enter{
-    width: 92.5%;
-    background: #009961;
-    color: rgb(255 255 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    position: absolute;
-    bottom: 0;
+  .child {
+    background: #009961 !important;
+    transition: all 0.9s ease !important;
+    height:0 !important;
+    overflow:hidden !important;
+    position:absolute !important;
+    bottom:0 !important;
+    width:92.5% !important;
+    color: white !important;
     border: none !important;
-    margin-left: 50rem;
-    margin-right: 50rem;
-    overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
-    transition: height 0.5s ease !important;
+
 
   }
   
-  .show-button-enter::after{
-    width: 92.5%;
-    background: #009961;
-    color: rgb(255 255 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    position: absolute;
-    bottom: 0;
-    border: none !important;
-    margin-left: 50rem;
-    margin-right: 50rem;
-    overflow: hidden;
-    transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
-    transition: height 0.5s ease-in-out !important;
-  }
 
-  .show-button-leave{
-    transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
-    transition: height 0.5s ease !important;
-    display: none;
 
-  }
+
 
 </style>
 
@@ -280,9 +63,9 @@ padding-bottom: 1.75rem;
 
 <body> 
 
-    <nav class="navbar">
+    <nav  id="navbar" class="navbar">
         <div class="container">
-          <div href="#" class="logo">International Corporate Consultancy</div>
+          <div class="logo"><a class="logoRef" href="#home" >International Corporate Consultancy</a></div>
           <button class="login-button-2">Login</button>
 
           <button class="toggle-button" id="toggleButton">
@@ -292,10 +75,10 @@ padding-bottom: 1.75rem;
           </button>
 
           <ul class="nav-links" id="navLinks">
-            <li><a class="cool-link" href="#">Home</a></li>
-            <li><a class="cool-link" href="#">About</a></li>
-            <li><a class="cool-link" href="#">Services</a></li>
-            <li><a class="cool-link" href="#">Contact</a></li>
+            <li><a class="cool-link " href="#hero">Home</a></li>
+            <li><a class="cool-link " href="#about">About</a></li>
+            <li><a class="cool-link" href="#information">Information</a></li>
+            <li><a class="cool-link" href="#gallery">Gallery</a></li>
             <li >
               <select class="lang" name="lang" id="langs">
               <option class="lang-option" value="volvo">English</option>
@@ -318,21 +101,9 @@ padding-bottom: 1.75rem;
 
 
         </div>
-      </nav>
+    </nav>
 
-      <!-- <nav class="navbar">
-        <div class="container">
-          <a href="#" class="logo">Logo</a>
-          <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-      </nav> -->
-
-    <section id="hero" class="d-flex flex-column justify-content-center">
+    <section id="hero" class="section d-flex flex-column justify-content-center">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xl-8">
@@ -342,10 +113,9 @@ padding-bottom: 1.75rem;
         </div>
 
 
-      </section>
+    </section>
 
-      
-      <div id="popup-container" class="popup-container">
+    <div id="popup-container" class="popup-container">
         <span class="close-button" onclick="closePopup()">X</span>
         <div class="video-container">
             <iframe id="youtube-iframe" src="" frameborder="0"  allowfullscreen
@@ -353,9 +123,7 @@ padding-bottom: 1.75rem;
         </div>
     </div>
 
-
-
-    <div class=" container-about">
+    <section id="about" class="section container-about">
     <div class="container-title">
       <div class="title">
         About Us   ?
@@ -368,29 +136,28 @@ padding-bottom: 1.75rem;
 
 					<div class="col-md-4 to-animate">
 						<div class="fh5co-type">
-							<h3 class="with-icon icon-1">Fruits</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+							<h3 class="with-icon icon-1">Our governance</h3>
+							<p>We are a values-driven organization and work to meet the highest professional and ethical standards.</p>
 						</div>
 					</div>
 					<div class="col-md-4 to-animate">
 						<div class="fh5co-type">
-							<h3 class="with-icon icon-2">Sea food</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+							<h3 class="with-icon icon-2">Our aspiration</h3>
+							<p>We help clients pursue sustainability, inclusion, and growth, all at the same time.</p>
 						</div>
 					</div>
 					<div class="col-md-4 to-animate">
 						<div class="fh5co-type">
-							<h3 class="with-icon icon-3">Vegetables</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+							<h3 class="with-icon icon-3">Our people & leadership</h3>
+							<p>We are defined by our people and are deeply committed to creating a diverse and inclusive culture.</p>
 						</div>
 					</div>
 
 				</div>
       </div>
-		</div>
+		</section>
 
-
-    <div class=" container-information">
+    <section id="information" class="section container-information">
       <div class="container-inf ">
         <div class="titleInf">
           Information
@@ -415,89 +182,93 @@ padding-bottom: 1.75rem;
 
           </div>
         </div>
-      </div>
+    </section>
 
-      <div class=" container-information">
-        <div class="container-inf ">
-          <div class="titleInf">
-            Gallery
+    <section id="gallery" class="section container-information">
+      <div class="container-inf ">
+        <div class="titleInf">
+          Gallery
+        </div>
+        <div class="line">
+          
+        </div>
+      </div>
+  
+        <div class="container-gallery">
+          <div class="row">
+  
+            <div class="col-12 to-animate">
+                <h6 class="with-icon subtitle-gallery">The most prominent pictures of the celebration of the fiftieth year of the United Arab Emirates </h6>
+            </div>
           </div>
-          <div class="line">
+
+        </div>
+
+
+        <div class="container-gallery-image">
+
+        <div class="gallery-container row">
+
+          <div class="col-12 to-animate ">
+            <button class="choose-button">All</button>
+        </div>
+
+        <div class="col-12 row images-container to-animate " id="images-container">
+        
+          <div class="col-md-3 picture-container">
+            <img src="/images/image1.jpeg" class="image-container" id="image-container"/>
+            <button class=" child show-button-enter"> <i class="bi bi-plus"></i> </button>
             
           </div>
-        </div>
-    
-          <div class="container-gallery">
-            <div class="row">
-    
-              <div class="col-12 to-animate">
-                  <h6 class="with-icon subtitle-gallery">The most prominent pictures of the celebration of the fiftieth year of the United Arab Emirates </h6>
-              </div>
-            </div>
+
+          <div class="col-md-3 picture-container">
+            <img src="/images/image2.jpeg" class="image-container" id="image-container"/>
+            <button class="child show-button-enter"> <i class="bi bi-plus"></i> </button>
 
           </div>
 
+          <div class="col-md-3 picture-container">
+            <img src="/images/image3.jpeg" class="image-container" id="image-container"/>
+            <button class="child show-button-enter"> <i class="bi bi-plus"></i> </button>
 
-          <div class="container-gallery-image">
-
-          <div class="gallery-container row">
-
-            <div class="col-12 to-animate ">
-              <button class="choose-button">All</button>
           </div>
 
-          <div class="col-12 row images-container to-animate " id="images-container">
-          
-            <div class="col-md-3 picture-container">
-              <img src="/images/image1.jpeg" class="image-container" id="image-container"/>
-              <button class=" child show-button-leave"> <i class="bi bi-plus"></i> </button>
-              
-            </div>
-
-            <div class="col-md-3 picture-container">
-              <img src="/images/image2.jpeg" class="image-container" id="image-container"/>
-              <button class="child show-button-leave"> <i class="bi bi-plus"></i> </button>
-
-            </div>
-
-            <div class="col-md-3 picture-container">
-              <img src="/images/image3.jpeg" class="image-container" id="image-container"/>
-              <button class="child show-button-leave"> <i class="bi bi-plus"></i> </button>
-
-            </div>
-
-            <div class="col-md-3 picture-container">
-              <img src="/images/image4.jpeg" class="image-container" id="image-container"/>
-              <div class=" child show-button-leave "> <i class="bi bi-plus"></i> </div>
-            </div>
-
+          <div class="col-md-3 picture-container">
+            <img src="/images/image4.jpeg" class="image-container" id="image-container"/>
+            <button id="absoluteButton" class="  child  show-button-enter"> <i class="bi bi-plus"></i> </button>
           </div>
 
         </div>
+
       </div>
+    </div>
 
-        </div>
+    </section>
+
+    <div class="row footer">
+
+      <div class="col-12 to-animate sub-footer">
+          <h6 class="with-icon sub-footer">
+            <span class="text-red">United</span> 
+            <span class="text-green">Arab</span>
+            <span class="text-white">Emirates</span> 
+            <span class="text-green"> 50 years of prosperity and progress</span>
+              </h6>
+      </div>
+      <div class="col-12 to-animate sub-footer">
+        <h6 class="with-icon sub-footer text-white">  © Copyright 2022All Rights Reserved  </h6>
+    </div>
+
+      
+
+    </div>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center active"><i class="bi bi-arrow-up-short"></i></a>
+
+    <button >Click Me</button>
 
 
-        <div class="row footer">
     
-          <div class="col-12 to-animate sub-footer">
-              <h6 class="with-icon sub-footer">
-                <span class="text-red">United</span> 
-                <span class="text-green">Arab</span>
-                <span class="text-white">Emirates</span> 
-                <span class="text-green"> 50 years of prosperity and progress</span>
-                 </h6>
-          </div>
-          <div class="col-12 to-animate sub-footer">
-            <h6 class="with-icon sub-footer text-white">  © Copyright 2022All Rights Reserved  </h6>
-        </div>
-
-         
-
-        </div>
-
-        <a href="#" class="back-to-top d-flex align-items-center justify-content-center active"><i class="bi bi-arrow-up-short"></i></a>
 </body>
 
 
@@ -523,12 +294,8 @@ var popupButton = document.getElementById('popup-button');
 popupButton.addEventListener('click', function() {
     openPopup("9Dr4a4_c27k");
 });
-</script>
 
-<script>
-
-
-  document.getElementById('toggleButton').addEventListener('click', function() {
+document.getElementById('toggleButton').addEventListener('click', function() {
     var navLinks = document.getElementById('navLinks');
     navLinks.classList.toggle('active');
     
@@ -544,11 +311,6 @@ popupButton.addEventListener('click', function() {
     }, 100); // Delay time in milliseconds
   });
 
-  
-
-</script>
-<script>
-
   var parentElements  = document.querySelectorAll('.picture-container');
 
 
@@ -561,10 +323,7 @@ parentElements.forEach(function(parent) {
         var child = parent.querySelector('.child');
         // Remove the 'removable' class from the child element
         if (child) {
-            child.classList.remove('show-button-enter');
             child.classList.add('show-button-leave');
-
-
         }
     });
 
@@ -573,14 +332,27 @@ parentElements.forEach(function(parent) {
         var child = parent.querySelector('.child');
         // Remove the 'removable' class from the child element
         if (child) {
-
-          child.classList.add('show-button-enter');
           child.classList.remove('show-button-leave');
-
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  var navbar = document.getElementById('navbar');
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+});
+
+
 </script>
+
+
 </html>
 
 
