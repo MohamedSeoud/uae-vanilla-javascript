@@ -271,9 +271,20 @@
     
 </body>
 
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
 <script>
+
+  function googleTranslateElementInit(){
+    new google.translate.translateElement(
+      {pageLanguage: ''}
+  )
+  }
+
+
+
+
 function openPopup(videoId) {
     var popupContainer = document.getElementById('popup-container');
     var youtubeIframe = document.getElementById('youtube-iframe');
@@ -351,7 +362,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 </script>
-
 
 </html>
 
