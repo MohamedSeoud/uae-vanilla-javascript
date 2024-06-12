@@ -360,6 +360,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </script>
 
+<script>
+
+  const langEl = document.querySelector('.langWrap');
+  const link = document.querySelectorAll('cool-lang');
+
+  link.forEach(element=>{
+    element.addEventListener('click' , ()=>{
+      langEl.querySelector('.active')
+    })
+  })
+</script>
+
 </html>
 
 
