@@ -4,10 +4,12 @@ const langEl = document.querySelector('.small-lang');
 const link = document.querySelectorAll('.cool-lang');
 const logo_text = document.querySelector('.logoText');
 const login_text = document.querySelector('.loginText');
+const loginTextPart = document.querySelector('.loginTextPart');
 const homeText = document.querySelector('.homeText');
 const aboutText = document.querySelector('.aboutText');
 const informationText = document.querySelector('.informationText');
 const galleryText = document.querySelector('.galleryText');
+const aboutUsPart = document.querySelector('.aboutUsPart');
 
 
 
@@ -27,10 +29,11 @@ link.forEach(element=>{
     logo_text.textContent = data[attribute].logoText;
     login_text.textContent = data[attribute].login;
     homeText.textContent = data[attribute].homeText;
-    aboutText.textContent = data[attribute].login;
-    informationText.textContent = data[attribute].login;
-    galleryText.textContent = data[attribute].login;
-
+    aboutText.textContent = data[attribute].aboutText;
+    informationText.textContent = data[attribute].informationText;
+    galleryText.textContent = data[attribute].galleryText;
+    aboutUsPart.textContent = data[attribute].aboutUsPart;
+    loginTextPart.textContent = data[attribute].login;
 
 
   })
@@ -41,27 +44,32 @@ var data = {
     "logoText" : "International Corporate Consultancy",
     "login":"Login",
     "homeText":"Home",
-    "aboutText":"About",
+    "aboutText":"About Us",
     "informationText":"Information",
     "galleryText":"Gallery",
+    "aboutUsPart":"About Us   ?",
 
   },
   "arabic" : {
     "logoText" : "استشارات الشركات الدولية",
     "login":"تسجيل الدخول",
     "homeText":"الصفحة الرئسية",
-    "aboutText":"About",
-    "informationText":"Information",
-    "galleryText":"Gallery",
+    "aboutText":"معلومات عنا",
+    "informationText":"بيانات",
+    "galleryText":"المعرض",
+    "aboutUsPart":"معلومات عنا   ؟",
+
   },
 
   "turkish" : {
     "logoText" :  "Uluslararası Kurumsal Danışmanlık",
     "login":"giriş yapmak",
     "homeText":"Ana sayfa",
-    "aboutText":"About",
-    "informationText":"Information",
-    "galleryText":"Gallery",
+    "aboutText":"Hakkımızda",
+    "informationText":"Bilgi",
+    "galleryText":"Galeri",
+    "aboutUsPart":"Hakkımızda   ?",
+
   },
 
 
