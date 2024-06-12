@@ -176,7 +176,6 @@ popupButton.addEventListener('click', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   var navItems = document.querySelectorAll('.cool-link');
-  var navItems2 = document.querySelectorAll('.logo');
 
   var sections = document.querySelectorAll('.section');
 
@@ -231,3 +230,30 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  const buttons = document.querySelectorAll('.choose-button');
+  const items = document.querySelectorAll('.item-image');
+
+  buttons.forEach(button => {
+      button.addEventListener('click', () => {
+          const filter = button.getAttribute('data-filter');
+
+          console.log('filter',filter)
+
+          items.forEach(item => {
+              if (filter === 'all') {
+                  item.classList.remove('hidden');
+              } else {
+                  if (item.classList.contains(filter)) {
+                      item.classList.remove('hidden');
+                  } else {
+                      item.classList.add('hidden');
+                  }
+              }
+          });
+      });
+  });
+})

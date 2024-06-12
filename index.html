@@ -5,36 +5,28 @@
     <title>Alkhamseen</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/flexboxgrid.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/lightbox.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script type="text/javascript" src="/js/script.js"></script>
     <script type="text/javascript" src="/js/lang.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script type="text/javascript" src="/js/lightbox-plus-jquery.js"></script>
 
 <style>
 
 
+.hidden{
+  display: none !important;
+}
 
 #absoluteButton.visible {
   opacity: 1;
 }
 
-.picture-container {
-    position: relative !important;
-    cursor: pointer !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    height: 350px !important;
-    overflow-x: hidden !important;
-    transition: all 0.6s ease !important;
-    transition: height 0.9s ease !important; /* Smooth transition effect */
-  
-    
-  }
+
 .picture-container:hover .child {
   height: 50px !important;
 
@@ -398,37 +390,33 @@ width: 100%;
         <div class="gallery-container row">
 
           <div class="col-12 to-animate flex-gallery ">
-            <button class="choose-button">All</button>
-            <button class="choose-button">All</button>
-            <button class="choose-button">All</button>
-            <button class="choose-button">All</button>
-
+            <button class="choose-button" data-filter="all">All</button>
+            <button class="choose-button" data-filter="khaled">Khaled</button>
+            <button class="choose-button"  data-filter="mohamed">Mohamed</button>
         </div>
 
         <div class="col-12 row images-container to-animate " id="images-container">
         
-          <div class="col-md-3 picture-container">
+            <a href="/images/image1.jpeg" data-lightbox="models" data-title="Caption1" class="  mohamed item-image col-md-3 picture-container">
             <img src="/images/image1.jpeg" class="image-container" id="image-container"/>
             <button class=" child show-button-enter"> <i class="bi bi-plus"></i> </button>
-            
-          </div>
+           </a>
 
-          <div class="col-md-3 picture-container">
+          <a href="/images/image2.jpeg" class=" col-md-3 picture-container mohamed  item-image" data-lightbox="models" data-title="Caption2">
             <img src="/images/image2.jpeg" class="image-container" id="image-container"/>
             <button class="child show-button-enter"> <i class="bi bi-plus"></i> </button>
+          </a>
 
-          </div>
-
-          <div class="col-md-3 picture-container">
+          <a href="/images/image3.jpeg" data-lightbox="models" class="col-md-3  picture-container khaled item-image" data-title="Caption3">
             <img src="/images/image3.jpeg" class="image-container" id="image-container"/>
             <button class="child show-button-enter"> <i class="bi bi-plus"></i> </button>
 
-          </div>
+          </a>
 
-          <div class="col-md-3 picture-container">
+          <a href="/images/image4.jpeg" data-lightbox="models" class="col-md-3   picture-container khaled item-image" data-title="Caption2">
             <img src="/images/image4.jpeg" class="image-container" id="image-container"/>
             <button id="absoluteButton" class="  child  show-button-enter"> <i class="bi bi-plus"></i> </button>
-          </div>
+          </a>
 
         </div>
 
