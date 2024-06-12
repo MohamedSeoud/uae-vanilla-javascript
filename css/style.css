@@ -524,7 +524,6 @@ display: none !important;
     position: absolute;
     translateX:-50%;
     translateY:-50%;
-    right:50%;
     bottom:50%;
     position: absolute;
     top: 50%;
@@ -928,7 +927,7 @@ padding-bottom: 1.75rem;
   display:flex;
   flex-direction:column;
   justify-content: center !important;;
-  align-items: start !important;;
+  align-items: start;
   padding-right: 90px;
 
 }
