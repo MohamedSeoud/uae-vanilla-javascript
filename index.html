@@ -56,6 +56,8 @@
   .cool-lang{
     text-decoration: none !important;
     cursor: pointer;
+    color: black !important;
+    background-color: white !important;
   }
   
   .cool-lang:hover {
@@ -68,8 +70,178 @@
 .login-button{
   text-decoration: none;
 }
+a{
+  text-decoration: none !important;
+}
+
+#navLanguage{
+  background-color: transparent !important;
+}
 
 
+
+.contact-form-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: #fff;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form-container h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    width: 100%;
+    text-align: start;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #009961;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: #009961;
+}
+
+@media (max-width: 600px) {
+    .contact-form-container {
+        padding: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.875rem;
+    }
+
+    .submitButton {
+        font-size: 0.875rem;
+    }
+}
+.contactContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-top: 50px;
+  padding-bottom:90px;
+
+  width: 100%;
+
+}
+.contact-image{
+  width: 100%;
+  height: 90%;
+}
+.container-contact{
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: repeat(2, 1fr) !important;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-top: 10px;
+  padding-bottom:90px;
+}
+.half-contact-image{
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10;
+}
+
+.flex-gallery{
+
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+flex-wrap: wrap;
+flex-direction: row;
+gap: 0.75rem;
+
+}
+
+@media screen and (max-width: 800px) {
+
+
+  .contactContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+}
+
+@media screen and (max-width: 980px) {
+
+
+
+
+.container-contact{
+display: grid;
+flex-direction: row;
+grid-template-columns: repeat(1, 1fr) !important;
+align-items: center;
+text-align: center;
+width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom:90px;
+}
+}
 
 </style>
 
@@ -94,6 +266,7 @@
             <li><a class="cool-link aboutText" href="#about">About</a></li>
             <li><a class="cool-link informationText" href="#information">Information</a></li>
             <li><a class="cool-link galleryText" href="#gallery">Gallery</a></li>
+            <li><a class="cool-link contact-us" href="#contact-us">Contact-us</a></li>
             <li >
               <select class="lang langWrap" name="lang" id="langs">
               <option class="lang-option " value="english">English</option>
@@ -105,11 +278,11 @@
 
           </ul>
 
-          <ul class="nav-links small-lang" id="navLinks">
-            <li><a class="cool-lang activeLang" lang="english" href="#">English</a></li>
-            <li><a class="cool-lang" lang="arabic" href="#">العربية</a></li>
-            <li><a class="cool-lang" lang="turkish" href="#"> Türkçe</a></li>
-          </ul>
+          <select  class="nav-links small-lang" id="navLanguage">
+            <option class="cool-lang" value="english"><a class="cool-lang activeLang" lang="english" href="#">English</a></option>
+            <option class="cool-lang" value="arabic"><a class="cool-lang" lang="arabic" href="#">العربية</a></option>
+            <option class="cool-lang" value="turkish"><a class="cool-lang" lang="turkish" href="#"> Türkçe</a></option>
+          </select>
 
             <a class="login-button loginTextPart" href="#">Login</a>
 
@@ -224,8 +397,12 @@
 
         <div class="gallery-container row">
 
-          <div class="col-12 to-animate ">
+          <div class="col-12 to-animate flex-gallery ">
             <button class="choose-button">All</button>
+            <button class="choose-button">All</button>
+            <button class="choose-button">All</button>
+            <button class="choose-button">All</button>
+
         </div>
 
         <div class="col-12 row images-container to-animate " id="images-container">
@@ -260,6 +437,48 @@
 
     </section>
 
+   <section id="contact-us" class=" section container-information ">
+
+    <div class="container-inf ">
+      <div class="titleInf">
+        Contact Us
+      </div>
+      <div class="line">
+        
+      </div>
+    </div>
+
+      <div class="row container-contact ">
+
+        <div  class="col-5 half-contact contact-form-container ">
+          <form id="contactForm">
+              <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button class="submitButton" type="submit">Send Message</button>
+          </form>
+      </div>
+
+      <div  class=" col-5 half-contact-image ">
+        <img class="contact-image" src="/images/image3.jpeg"/>
+        
+      </div>
+
+    </div>
+
+
+   </section>
+
+
     <div class="row footer">
 
       <div class="col-12 to-animate sub-footer">
@@ -271,7 +490,7 @@
               </h6>
       </div>
       <div class="col-12 to-animate sub-footer">
-        <h6 class="with-icon sub-footer text-white">  © Copyright 2022All Rights Reserved  </h6>
+        <h6 class="with-icon sub-footer text-white">  © Copyright 2022 All Rights Reserved  </h6>
     </div>
 
       

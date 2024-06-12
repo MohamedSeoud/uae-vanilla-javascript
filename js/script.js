@@ -5,8 +5,40 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleButton.addEventListener('click', () => {
       navbarLinks.classList.toggle('active');
     });
-  });
-  
+
+    // script.js
+    const contactForm = document.getElementById('contactForm');
+
+    contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (name === '' || email === '' || message === '') {
+            alert('Please fill in all fields.');
+            return;
+        }
+
+        if (!validateEmail(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        // If everything is valid, you can submit the form or handle it as needed.
+        alert('Message sent successfully!');
+        contactForm.reset();
+    });
+
+    function validateEmail(email) {
+        const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return re.test(email);
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+ 
   var parentElements  = document.querySelectorAll('.picture-container');
 
 
@@ -37,7 +69,6 @@ parentElements.forEach(function(parent) {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
   var navbar = document.getElementById('navbar');
 
   window.addEventListener('scroll', function() {
@@ -48,11 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
-
-
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -107,7 +133,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Scroll event listener to handle scrolling behavior
   window.addEventListener('scroll', checkSectionInView);
-});
 
 
 document.getElementById('toggleButton').addEventListener('click', function() {
@@ -205,3 +230,4 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', checkSectionInView);
 });
 
+});

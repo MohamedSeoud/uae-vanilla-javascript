@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-const langEl = document.querySelector('.small-lang');
+const langEl = document.getElementById('navLanguage');
 const link = document.querySelectorAll('.cool-lang');
 const logo_text = document.querySelector('.logoText');
 const login_text = document.querySelector('.loginText');
@@ -13,17 +13,16 @@ const aboutUsPart = document.querySelector('.aboutUsPart');
 
 
 
-link.forEach(element=>{
-  element.addEventListener('click' , ()=>{
-    langEl.querySelector('.activeLang').classList.remove('activeLang');
-    element.classList.add('activeLang');
-    const attribute = element.getAttribute('lang');
+  langEl.addEventListener('change' , ()=>{
+
+    const attribute = langEl.value;
+
+    console.log('value',attribute)
     if(attribute === "arabic" ){
       document.dir="rtl"
     }
     else{
       document.dir="ltr"
-
     }
 
     logo_text.textContent = data[attribute].logoText;
@@ -35,9 +34,7 @@ link.forEach(element=>{
     aboutUsPart.textContent = data[attribute].aboutUsPart;
     loginTextPart.textContent = data[attribute].login;
 
-
   })
-});
 
 var data = {
   "english" : {
