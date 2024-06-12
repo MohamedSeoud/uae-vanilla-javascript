@@ -75,7 +75,7 @@
 
     <nav  id="navbar" class="navbar">
         <div class="container">
-          <div class="logo"><a class="logoRef" href="#home" >International Corporate Consultancy</a></div>
+          <div class="logo logoText"><a class="logoRef" href="#home" >International Corporate Consultancy</a></div>
           <button class="login-button-2">Login</button>
 
           <button class="toggle-button" id="toggleButton">
@@ -92,8 +92,8 @@
             <li >
               <select class="lang langWrap" name="lang" id="langs">
               <option class="lang-option " value="english">English</option>
-              <option class="lang-option"value="arabic">العربية</option>
-              <option class="lang-option"value="Turkish">Türkçe</option>
+              <option class="lang-option" value="arabic">العربية</option>
+              <option class="lang-option" value="Turkish">Türkçe</option>
             </select>
           </li>
             
@@ -101,9 +101,9 @@
           </ul>
 
           <ul class="nav-links small-lang" id="navLinks">
-            <li><a class="cool-lang activeLang" href="#">English</a></li>
-            <li><a class="cool-lang" href="#">العربية</a></li>
-            <li><a class="cool-lang" href="#">Türkçe</a></li>
+            <li><a class="cool-lang activeLang" lang="english" href="#">English</a></li>
+            <li><a class="cool-lang" lang="arabic" href="#">العربية</a></li>
+            <li><a class="cool-lang" lang="Turkish" href="#"> Türkçe</a></li>
           </ul>
 
             <button class="login-button">Login</button>
@@ -373,14 +373,29 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
 
   const langEl = document.querySelector('.small-lang');
-  const link = document.querySelectorAll('cool-lang');
+  const link = document.querySelectorAll('.cool-lang');
+  const logo_text = document.querySelectorAll('.logoText');
 
   link.forEach(element=>{
     element.addEventListener('click' , ()=>{
       langEl.querySelector('.activeLang').classList.remove('activeLang');
-      element.classList.add('activeLang')
+      element.classList.add('activeLang');
+      const attribute = element.getAttribute('lang');
+      console.log('sss',attribute)
+
+      logo_text.textContent = data[attribute].logoText;
+
     })
-  })
+  });
+
+  var data = {
+    "english":{
+      "logoText":"International Corporate Consultancy"
+    },
+    "arabic":{
+      "logoText":"استشارات الشركات الدولية"
+    },
+  }
 </script>
 
 </html>
