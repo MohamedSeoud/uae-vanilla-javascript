@@ -80,9 +80,9 @@
             <li><a class="cool-link" href="#information">Information</a></li>
             <li><a class="cool-link" href="#gallery">Gallery</a></li>
             <li >
-              <select class="lang" name="lang" id="langs">
-              <option class="lang-option" value="volvo">English</option>
-              <option class="lang-option"value="saab">العربية</option>
+              <select class="lang langWrap" name="lang" id="langs">
+              <option class="lang-option" value="english">English</option>
+              <option class="lang-option"value="arabic">العربية</option>
               <option class="lang-option"value="mercedes">Türkçe</option>
             </select>
           </li>
@@ -265,7 +265,6 @@
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center active"><i class="bi bi-arrow-up-short"></i></a>
 
-    <button >Click Me</button>
 
 
     
@@ -279,7 +278,7 @@
   function googleTranslateElementInit(){
     new google.translate.translateElement(
       {pageLanguage: 'en'},
-      
+
   )
   }
 
@@ -324,9 +323,6 @@ document.getElementById('toggleButton').addEventListener('click', function() {
   });
 
   var parentElements  = document.querySelectorAll('.picture-container');
-
-
-
 
 parentElements.forEach(function(parent) {
 
