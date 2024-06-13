@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.querySelector('.toggle-button');
-    const navbarLinks = document.querySelector('.navbar-links');
+    const toggleButton = document.getElementById('toggleButton');
+    const navbarLinks = document.getElementById('navLinks');
   
     toggleButton.addEventListener('click', () => {
       navbarLinks.classList.toggle('active');
@@ -257,3 +257,88 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 })
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+
+function openPopup(videoId) {
+  var popupContainer = document.getElementById('popup-container');
+  var youtubeIframe = document.getElementById('youtube-iframe');
+
+  youtubeIframe.src = "https://www.youtube.com/embed/" + videoId;
+  popupContainer.classList.add('show');
+}
+
+function closePopup() {
+  var popupContainer = document.getElementById('popup-container');
+  var youtubeIframe = document.getElementById('youtube-iframe');
+
+  youtubeIframe.src = "";
+  popupContainer.classList.remove('show');
+}
+
+var popupButton = document.getElementById('popup-button');
+popupButton.addEventListener('click', function() {
+  openPopup("9Dr4a4_c27k");
+});
+
+document.getElementById('toggleButton').addEventListener('click', function() {
+  var navLinks = document.getElementById('navLinks');
+  navLinks.classList.toggle('active');
+  
+  // Toggle the border direction with a delay
+  setTimeout(function() {
+    if (navLinks.classList.contains('active')) {
+      navLinks.style.borderRight = 'none';
+      navLinks.style.borderLeft = '2px solid #fff';
+    } else {
+      navLinks.style.borderRight = '2px solid #fff';
+      navLinks.style.borderLeft = 'none';
+    }
+  }, 100); // Delay time in milliseconds
+});
+
+var parentElements  = document.querySelectorAll('.picture-container');
+
+parentElements.forEach(function(parent) {
+
+  parent.addEventListener('mouseout', function() {
+      // Select the child element with the class 'removable'
+      var child = parent.querySelector('.child');
+      // Remove the 'removable' class from the child element
+      if (child) {
+          child.classList.add('show-button-leave');
+      }
+  });
+
+  parent.addEventListener('mouseover', function() {
+      // Select the child element with the class 'removable'
+      var child = parent.querySelector('.child');
+      // Remove the 'removable' class from the child element
+      if (child) {
+        child.classList.remove('show-button-leave');
+      }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+var navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+});
+});

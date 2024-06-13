@@ -15,225 +15,31 @@
     <script type="text/javascript" src="/js/lang.js"></script>
     <script type="text/javascript" src="/js/lightbox-plus-jquery.js"></script>
 
+
 <style>
 
+  .links-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 12px;
+    padding-top: 3px;
 
-.hidden{
-  display: none !important;
-}
-
-#absoluteButton.visible {
-  opacity: 1;
-}
-
-
-.picture-container:hover .child {
-  height: 50px !important;
-
-}
-
-  .child {
-    background: #009961 !important;
-    transition: all 0.9s ease !important;
-    height:0 !important;
-    overflow:hidden !important;
-    position:absolute !important;
-    bottom:0 !important;
-    width:92.5% !important;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
     color: white !important;
-    border: none !important;
-
-
+    gap: 6px;
   }
-  .cool-lang{
-    text-decoration: none !important;
+  .link-footer-item{
+    color: white ;
     cursor: pointer;
-    color: black !important;
-    background-color: white !important;
+  }
+  .link-footer-item :hover{
+    color: #00c27b !important;
+    cursor: pointer;
   }
   
-  .cool-lang:hover {
-    color: #009961 !important;
-  }
-  .activeLang{
-    color: #009961 !important;
-  }
-
-.login-button{
-  text-decoration: none;
-}
-a{
-  text-decoration: none !important;
-}
-
-#navLanguage{
-  background-color: transparent !important;
-}
-
-
-
-.contact-form-container {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background: #fff;
-    border-radius: 8px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.contact-form-container h2 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-    color: #333;
-}
-
-.form-group {
-    margin-bottom: 1rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #555;
-    width: 100%;
-    text-align: start;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 1rem;
-    color: #333;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-.submitButton {
-    width: 100%;
-    padding: 0.75rem;
-    background-color: #009961;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.submitButton:hover {
-    background-color: #009961;
-}
-
-@media (max-width: 600px) {
-    .contact-form-container {
-        padding: 1rem;
-    }
-
-    .form-group input,
-    .form-group textarea {
-        font-size: 0.875rem;
-    }
-
-    .submitButton {
-        font-size: 0.875rem;
-    }
-}
-.contactContainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-left: 90px;
-  padding-right: 90px;
-  padding-top: 50px;
-  padding-bottom:90px;
-
-  width: 100%;
-
-}
-.contact-image{
-  width: 100%;
-  height: 90%;
-}
-.container-contact{
-  display: grid;
-  flex-direction: row;
-  grid-template-columns: repeat(2, 1fr) !important;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  padding-left: 90px;
-  padding-right: 90px;
-  padding-top: 10px;
-  padding-bottom:90px;
-}
-.half-contact-image{
-  width: 100%;
-  height: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10;
-}
-
-.flex-gallery{
-
-display: flex;
-justify-content: center;
-align-items: center;
-width: 100%;
-flex-wrap: wrap;
-flex-direction: row;
-gap: 0.75rem;
-
-}
-
-@media screen and (max-width: 800px) {
-
-
-  .contactContainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-
-}
-
-@media screen and (max-width: 980px) {
-
-
-
-
-.container-contact{
-display: grid;
-flex-direction: row;
-grid-template-columns: repeat(1, 1fr) !important;
-align-items: center;
-text-align: center;
-width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom:90px;
-}
-}
 
 </style>
 
@@ -247,13 +53,13 @@ width: 100%;
           <div class="logo "><a class="logoRef logoText" href="#home" >International Corporate Consultancy</a></div>
           <a class="login-button-2 loginText" href="#">Login</a>
 
-          <button class="toggle-button" id="toggleButton">
+          <button class="toggle-button " id="toggleButton">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
           </button>
 
-          <ul class="nav-links" id="navLinks">
+          <ul class="nav-links " id="navLinks">
             <li><a class="cool-link homeText " href="#hero">Home</a></li>
             <li><a class="cool-link aboutText" href="#about">About</a></li>
             <li><a class="cool-link informationText" href="#information">Information</a></li>
@@ -493,9 +299,23 @@ width: 100%;
             <span class="text-green"> 50 years of prosperity and progress</span>
               </h6>
       </div>
+
+      <div class="col-12 to-animate links-footer ">
+        <a href="#" class="link-footer-item"> <i class="bi bi-facebook"></i> </a>
+        <a href="#" class="link-footer-item"> <i class="bi bi-instagram"></i> </a>
+        <a href="#" class="link-footer-item"> <i class="bi bi-tiktok"></i> </a>
+        <a href="#" class="link-footer-item"> <i class="bi bi-twitter"></i> </a>
+        <a href="#" class="link-footer-item"> <i class="bi bi-linkedin"></i> </a>
+        <a href="#" class="link-footer-item"> <i class="bi bi-snapchat"></i> </a>
+        <a href="#" class="link-footer-item"> <i class="bi bi-whatsapp"></i> </a>
+  
+      </div>
+
       <div class="col-12 to-animate sub-footer">
         <h6 class="with-icon sub-footer text-white">  © Copyright 2022 All Rights Reserved  </h6>
     </div>
+
+
 
       
 
@@ -509,88 +329,6 @@ width: 100%;
 </body>
 
 
-
-<script>
-
-
-
-
-
-
-function openPopup(videoId) {
-    var popupContainer = document.getElementById('popup-container');
-    var youtubeIframe = document.getElementById('youtube-iframe');
-
-    youtubeIframe.src = "https://www.youtube.com/embed/" + videoId;
-    popupContainer.classList.add('show');
-}
-
-function closePopup() {
-    var popupContainer = document.getElementById('popup-container');
-    var youtubeIframe = document.getElementById('youtube-iframe');
-
-    youtubeIframe.src = "";
-    popupContainer.classList.remove('show');
-}
-
-var popupButton = document.getElementById('popup-button');
-popupButton.addEventListener('click', function() {
-    openPopup("9Dr4a4_c27k");
-});
-
-document.getElementById('toggleButton').addEventListener('click', function() {
-    var navLinks = document.getElementById('navLinks');
-    navLinks.classList.toggle('active');
-    
-    // Toggle the border direction with a delay
-    setTimeout(function() {
-      if (navLinks.classList.contains('active')) {
-        navLinks.style.borderRight = 'none';
-        navLinks.style.borderLeft = '2px solid #fff';
-      } else {
-        navLinks.style.borderRight = '2px solid #fff';
-        navLinks.style.borderLeft = 'none';
-      }
-    }, 100); // Delay time in milliseconds
-  });
-
-  var parentElements  = document.querySelectorAll('.picture-container');
-
-parentElements.forEach(function(parent) {
-
-    parent.addEventListener('mouseout', function() {
-        // Select the child element with the class 'removable'
-        var child = parent.querySelector('.child');
-        // Remove the 'removable' class from the child element
-        if (child) {
-            child.classList.add('show-button-leave');
-        }
-    });
-
-    parent.addEventListener('mouseover', function() {
-        // Select the child element with the class 'removable'
-        var child = parent.querySelector('.child');
-        // Remove the 'removable' class from the child element
-        if (child) {
-          child.classList.remove('show-button-leave');
-        }
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  var navbar = document.getElementById('navbar');
-
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
-});
-
-
-</script>
 
 
 
